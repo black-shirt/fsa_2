@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>File Download</title>
+</head>
+<body>
+    <h1>File Download</h1>
+    <ul>
+        <% locals.file.originalName.forEach(name => { %>
+        <li><%= name %></li>
+    <% }) %>
+    </ul>
+    <a href="/file/<%= locals.file.id %>/download"><button>Download</button></a>
+</body>
+</html>
